@@ -34,6 +34,8 @@ require "ship_compliant/void_sales_order_result"
 require "ship_compliant/product_attributes"
 require "ship_compliant/add_update_product"
 require "ship_compliant/add_update_product_result"
+require "ship_compliant/delete_product"
+require "ship_compliant/delete_product_result"
 
 # ADD UPDATE BRAND
 require "ship_compliant/add_update_brand"

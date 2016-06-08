@@ -11,7 +11,6 @@ module ShipCompliant
   #   ShipCompliant::AddUpdateBrand.brand({
   #     key: 'DENSNW',
   #     name: 'Denver Snow',
-  #     
   #     this_brand_is_bottled_by_a_third_party: false,
   #     this_brand_is_produced_by_a_third_party: false,
   #     this_brand_operates_under_a_trade_name: false,
