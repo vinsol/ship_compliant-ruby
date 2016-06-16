@@ -14,7 +14,9 @@ module ShipCompliant
   end
 
   def self.secondary_configuration
-    @secondary_configuration ||= Configuration.new
+    @secondary_configuration ||= @configuration.clone
+    @secondary_configuration.wsdl = 'https://ws-dev.shipcompliant.com/Services/1.2/ProductService.asmx?WSDL'
+    @secondary_configuration
   end
 
   def self.super_supplier_configuration

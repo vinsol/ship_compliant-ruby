@@ -33,10 +33,10 @@ module ShipCompliant
     #     ShipCompliant::DeleteProduct.product({
     #       # product attributes
     #     }, update_mode: 'UpdateExisting')
-    def self.product(product, configuration: :default)
+    def self.product(variant, configuration: :secondary)
       details = {
-                  'BrandKey' => product.brand.key,
-                  'ProductKey' => product.key
+                  'BrandKey' => variant.product.brand.try(:key),
+                  'ProductKey' => variant.key
                 }
 
       result = delete_product(details, configuration)
@@ -46,7 +46,6 @@ module ShipCompliant
     private
 
     def self.delete_product(request, configuration)
-      ShipCompliant.configuration.wsdl = 'https://ws-dev.shipcompliant.com/Services/1.2/ProductService.asmx?WSDL'
       ShipCompliant.client(configuration: configuration).call(:delete_product, request)
     end
 
