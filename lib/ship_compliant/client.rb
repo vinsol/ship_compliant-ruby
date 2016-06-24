@@ -34,7 +34,8 @@ module ShipCompliant
     {
       default: ShipCompliant.configuration,
       secondary: ShipCompliant.secondary_configuration,
-      super_supplier: ShipCompliant.super_supplier_configuration
+      super_supplier: ShipCompliant.super_supplier_configuration,
+      sale_order_service_configuration: ShipCompliant.sale_order_service_configuration
     }[config_key]
   end
 

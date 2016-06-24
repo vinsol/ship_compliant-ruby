@@ -30,6 +30,10 @@ require "ship_compliant/get_sales_order_extended_result"
 require "ship_compliant/void_sales_order"
 require "ship_compliant/void_sales_order_result"
 
+# Check Complaince for Order and Address
+require "ship_compliant/calculate_sales_tax_due_for_order"
+require "ship_compliant/calculate_sales_tax_due_for_order_result"
+
 # ADD UPDATE PRODUCT
 require "ship_compliant/product_attributes"
 require "ship_compliant/add_update_product"
