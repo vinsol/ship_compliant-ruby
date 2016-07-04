@@ -3,11 +3,12 @@ module ShipCompliant
     attr_accessor :configuration,
                   :secondary_configuration,
                   :super_supplier_configuration,
-                  :sale_order_service_configuration
+                  :sale_order_service_configuration,
+                  :tax_service_configuration
   end
 
   def self.configure
-    yield(configuration, secondary_configuration, super_supplier_configuration, sale_order_service_configuration)
+    yield(configuration, secondary_configuration, super_supplier_configuration, sale_order_service_configuration, tax_service_configuration)
   end
 
   def self.configuration
@@ -22,8 +23,14 @@ module ShipCompliant
 
   def self.sale_order_service_configuration
     @sale_order_service_configuration ||= @configuration.clone
-    @sale_order_service_configuration.wsdl = 'https://ws-dev.shipcompliant.com/services/1.2/TaxService.asmx?wsdl'
+    @sale_order_service_configuration.wsdl = 'https://ws-dev.shipcompliant.com/services/1.2/SalesOrderService.asmx?wsdl'
     @sale_order_service_configuration
+  end
+
+  def self.tax_service_configuration
+    @tax_service_configuration ||= @configuration.clone
+    @tax_service_configuration.wsdl = 'https://ws-dev.shipcompliant.com/services/1.2/TaxService.asmx?wsdl'
+    @tax_service_configuration
   end
 
   def self.super_supplier_configuration

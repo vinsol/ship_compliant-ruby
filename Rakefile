@@ -21,7 +21,8 @@ class RDoc::Generator::SDoc
   protected
   ### Create class tree structure and write it as json
   def generate_class_tree
-    my_topclasses = %W(SearchSalesOrders VoidSalesOrder AddUpdateProduct CheckCompliance CommitSalesOrder GetInventoryDetails GetSalesOrderExtended AddUpdateBrand SearchMoreSalesOrders DeleteProduct)
+    my_topclasses = %W(SearchSalesOrders VoidSalesOrder AddUpdateProduct CheckCompliance CommitSalesOrder GetInventoryDetails GetSalesOrderExtended
+                       AddUpdateBrand SearchMoreSalesOrders DeleteProduct CheckComplianceOfAndCommitSalesOrder)
 
     debug_msg "Generating class tree"
     topclasses = @classes.select do |klass|

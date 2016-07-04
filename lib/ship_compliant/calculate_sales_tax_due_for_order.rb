@@ -1,12 +1,12 @@
 module ShipCompliant
   class CalculateSalesTaxDueForOrder
-    def self.order(details, options: {}, configuration: :sale_order_service_configuration)
+    def self.order(details, options: {}, configuration: :tax_service_configuration)
 
       result = calculate_sales_tax_due_for_order(details, configuration: configuration)
       CalculateSalesTaxDueForOrderResult.new(result)
     end
 
-    def self.line_item(details, options: {}, configuration: :sale_order_service_configuration)
+    def self.line_item(details, options: {}, configuration: :tax_service_configuration)
 
       result = calculate_sales_tax_due_for_order(details, configuration: configuration)
       CalculateSalesTaxDueForOrderResult.new(result)
