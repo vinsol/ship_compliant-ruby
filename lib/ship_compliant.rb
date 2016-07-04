@@ -55,6 +55,7 @@ require "ship_compliant/freight_sales_tax_rate"
 require "ship_compliant/check_compliance"
 require "ship_compliant/check_compliance_of_and_commit_sales_order"
 require "ship_compliant/check_compliance_result"
+require "ship_compliant/persist_sales_order"
 
 require "ship_compliant/shipment_compliance"
 require "ship_compliant/compliance_rule"
